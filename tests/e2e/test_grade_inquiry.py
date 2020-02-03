@@ -19,7 +19,7 @@ class TestGradeInquiry(BaseTestCase):
 
     def set_grade_inquiries_for_gradeable(self, gradeable_id, date=None, allowed=True):
         # ensure that grade inquiries are enabled for grades_released_homework gradeable
-        self.driver.find_element_by_xpath("//div[@id='"+gradeable_id+"']//*[@name='edit gradeable configuration_button']").click()
+        self.driver.find_element_by_xpath("//div[@id='"+gradeable_id+"']//*[@name='edit_gradeable_configuration_button']").click()
         if allowed:
             self.driver.find_element_by_id("yes_regrade_allowed").click()
         else:

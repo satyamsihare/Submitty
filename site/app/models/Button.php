@@ -19,6 +19,7 @@ use app\libraries\Core;
  * @method string|null getAriaLabel()
  * @method string|null getBadge()
  * @method string|null getIcon()
+ * @method string getName()
  *
  * @method void setTitle(string $title)
  * @method void setSubtitle(string|null $subtitle)
@@ -32,6 +33,7 @@ use app\libraries\Core;
  * @method void setAriaLabel(string|null $ariaLabel)
  * @method void setBadge(string|null $badge)
  * @method void setIcon(string|null $icon)
+ * @method void setName(string $name)
  */
 class Button extends AbstractModel {
     /** @prop @var string|null $title */
@@ -58,6 +60,8 @@ class Button extends AbstractModel {
     protected $badge;
     /** @prop @var string|null $icon */
     protected $icon;
+    /** @prop @var string|null $name */
+    protected $name;
 
     /**
      * @param Core $core
@@ -80,6 +84,7 @@ class Button extends AbstractModel {
         $this->aria_label = $details["aria_label"] ?? null;
         $this->badge = $details["badge"] ?? null;
         $this->icon = $details["icon"] ?? null;
+        $this->name = $details["name"] ?? null;
     }
 
     /**

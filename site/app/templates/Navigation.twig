@@ -81,7 +81,7 @@
     {% else %}
         <a class="{{ button.getClass() }}{{ (button.getTitle() == 'Edit' or button.getTitle() == 'Delete') and has_build_error ? 'edit-build-error' : '' }}"
             {% if button.getTitle() != null %}
-                name="{{ button.getTitle()|lower }}_button"
+                name="{{ button.getName()|lower }}_button"
             {% endif %}
             {% if button.isDisabled() %}
                 disabled
