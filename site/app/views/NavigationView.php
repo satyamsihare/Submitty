@@ -713,6 +713,7 @@ class NavigationView extends AbstractView {
     private function getDeleteButton(Gradeable $gradeable) {
         return new Button($this->core, [
             "title" => "Delete Gradeable",
+            "name" => "delete_gradeable",
             "href" => "javascript:newDeleteGradeableForm('" .
                 $this->core->buildCourseUrl(['gradeable', $gradeable->getId(), 'delete'])
                 . "', '{$gradeable->getTitle()}');",
