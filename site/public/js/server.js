@@ -164,8 +164,8 @@ function newDeleteGradeableForm(form_action, gradeable_name) {
 function displayCloseSubmissionsWarning(form_action,gradeable_name) {
     $('.popup-form').css('display', 'none');
     var form = $("#close-submissions-form");
-    $('[name="close-submissions-message"]', form).html('');
-    $('[name="close-submissions-message"]', form).append('<b>'+gradeable_name+'</b>');
+    $('#close-submissions-message', form).html('');
+    $('#close-submissions-message', form).append('<b>'+gradeable_name+'</b>');
     $('[name="close-submissions-confirmation"]', form).attr('action', form_action);
     form.css("display", "block");
     captureTabInModal("close-submissions-form");
