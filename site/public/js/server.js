@@ -154,8 +154,8 @@ function loadTestcaseOutput(div_name, gradeable_id, who_id, index, version = '')
 function newDeleteGradeableForm(form_action, gradeable_name) {
     $('.popup-form').css('display', 'none');
     var form = $("#delete-gradeable-form");
-    $('[name="delete-gradeable-message"]', form).html('');
-    $('[name="delete-gradeable-message"]', form).append('<b>'+gradeable_name+'</b>');
+    $('#delete-gradeable-message', form).html('');
+    $('#delete-gradeable-message', form).append('<b>'+gradeable_name+'</b>');
     $('[name="delete-confirmation"]', form).attr('action', form_action);
     form.css("display", "block");
     captureTabInModal("delete-gradeable-form");
