@@ -209,7 +209,7 @@
 
 {% macro render_sidebar_button(button, mobile) %}
     {% if button.getTitle() == "" %}
-        <hr />
+        <li><hr /></li>
     {% else %}
         <li>
             {% if button.getHref() == null %}
